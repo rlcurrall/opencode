@@ -6,7 +6,7 @@ import { App } from "../app/app"
 const TodoInfo = z.object({
   content: z.string().min(1).describe("Brief description of the task"),
   status: z
-    .enum(["pending", "in_progress", "completed"])
+    .enum(["pending", "in_progress", "completed", "cancelled"])
     .describe("Current status of the task"),
   priority: z
     .enum(["high", "medium", "low"])
